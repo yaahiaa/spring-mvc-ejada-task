@@ -38,6 +38,3 @@ build/
 # Maven
 .mvn/
 !/.mvn/wrapper/maven-wrapper.jar
-
-# Environment files
-application.properties
