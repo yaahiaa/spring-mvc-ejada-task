@@ -1,12 +1,15 @@
-package ejada.task.service;
+package ejada.task.service.interfaces;
 
+import ejada.task.dto.EmployeeRequest;
+import ejada.task.dto.EmployeeResponse;
 import ejada.task.model.Employee;
 
 import java.util.List;
 
 public interface EmployeeService {
-    void save(Employee employee);
-    List<Employee> get();
-    void delete(Long id);
-    List<Employee> filter(Long departmentId);
+    EmployeeResponse addEmployee(EmployeeRequest employeeRequest);
+    List<EmployeeResponse> viewEmployees();
+    EmployeeResponse editEmployee(Long id, EmployeeRequest updatedEmployee);
+    void deleteEmployee(Long id);
+    List<EmployeeResponse> filterByDepartment(Long departmentId);
 }
